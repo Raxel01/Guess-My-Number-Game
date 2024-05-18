@@ -1,6 +1,8 @@
 'use strict';
 
-const random_n =  Math.trunc( Math.random() * 20 ) + 1;
+let random_n =  Math.trunc( Math.random() * 20 ) + 1;
+
+// document.querySelector('.guess').value = random_n;
 
 document.querySelector('.check').addEventListener('click', function(){
     document.querySelector('body').style.backgroundColor = '#222';
@@ -43,6 +45,7 @@ document.querySelector('.again').addEventListener('click', function(){
     document.querySelector('h1').style.border = 'none';
     document.querySelector('.guess').value = '';
     document.querySelector('.number').textContent = '?';
+    random_n =  Math.trunc( Math.random() * 20 ) + 1;
 })
 
 document.querySelector('.Hint').addEventListener('click', function(){
