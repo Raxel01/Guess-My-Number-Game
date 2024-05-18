@@ -49,7 +49,14 @@ document.querySelector('.again').addEventListener('click', function(){
 })
 
 document.querySelector('.Hint').addEventListener('click', function(){
+    if (Number(document.querySelector('.score').textContent) < 2){
+
     document.querySelector('h1').textContent = `The Secret Number is beetwen ${random_n - 4} and ${random_n +3}`;
     document.querySelector('h1').style.fontSize = '2rem';
     document.querySelector('h1').style.border = '1px solid #ff073a';
+}
+else{
+    document.querySelector('h1').textContent = 'You Can\'t Use this option For now';
+}
+
 })
